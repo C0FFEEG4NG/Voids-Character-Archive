@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BluScreen - The Void Archives</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00f;
+      text-shadow: 0 0 12px #00f, 0 0 20px #0ff;
+      animation: flicker 1.5s infinite;
+    }
+
+    .profile-box {
+      background: #020d0d;
+      border: 1px solid #0ff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      animation: glitchBox 3s infinite ease-in-out;
+    }
+
+    .info-line {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .label {
+      color: #aaa;
+    }
+
+    .value {
+      color: #0ff;
+    }
+
+    .error {
+      color: red;
+      font-style: italic;
+      animation: blink 1s infinite;
+    }
+
+    a.back {
+      margin-top: 2rem;
+      color: #0ff;
+      text-decoration: none;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    a.back:hover {
+      opacity: 1;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+      70% { opacity: 0.9; }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes glitchBox {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>BLUSCREEN</h1>
+  <div class="profile-box">
+    <div class="info-line"><span class="label">Name:</span> <span class="value">BluScreen</span></div>
+    <div class="info-line"><span class="label">Gender:</span> <span class="value">he/him of course</span></div>
+    <div class="info-line"><span class="label">Species:</span> <span class="value">im a Grayscourge now stop asking</span></div>
+    <div class="info-line"><span class="label">Best Friend:</span> <span class="value">Huh??</span></div>
+    <div class="info-line"><span class="label">Status:</span> <span class="value">[BOOTING . . .]</span></div>
+    <div class="info-line"><span class="label">Vibe:</span> <span class="value">uhm Hacker i guess</span></div>
+    <div class="info-line"><span class="label">Warning:</span> <span class="error">System Instability Detected</span></div>
+  </div>
+
+  <a class="back" href="index.html">← Return to Archives</a>
+</body>
+</html>
